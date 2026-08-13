@@ -1,0 +1,278 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="The personal website of Trey Layes."
+		/>
+		<title>Trey Layes</title>
+	</head>
+
+	<body>
+		<header>
+			<nav class="container">
+				<a class="name" href="/">Trey Layes</a>
+
+				<div class="nav-links">
+					<a href="#about">About</a>
+					<a href="#explore">Explore</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container">
+					<p class="eyebrow">Hello, internet.</p>
+
+					<h1>I'm Trey.</h1>
+
+					<p class="intro">
+						This is my little corner of the web: a place to share what I'm
+						learning, making, exploring, playing, cooking, and thinking about.
+					</p>
+				</div>
+			</section>
+
+			<section id="about" class="content-section">
+				<div class="container">
+					<article class="about-card">
+						<p class="eyebrow">About me</p>
+
+						<h2>A work in progress, in the best way.</h2>
+
+						<p>
+							I'm interested in technology, travel, games, food, creative
+							projects, and the strange collection of rabbit holes that make
+							life interesting.
+						</p>
+
+						<p>
+							I created this site because I wanted a place online that actually
+							feels like mine. No feed to satisfy and no algorithm to impress.
+							Just a growing collection of ideas, experiences, projects, photos,
+							and things worth sharing.
+						</p>
+
+						<p>
+							For now, this site is deliberately simple. I'll add more as I find
+							things worth putting here.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="explore" class="content-section">
+				<div class="container">
+					<p class="eyebrow">Coming eventually</p>
+
+					<h2>More rooms for this little corner of the web.</h2>
+
+					<div class="cards">
+						<article class="card">
+							<h3>Journal</h3>
+
+							<p>
+								Thoughts, stories, lessons, and occasional deep dives.
+							</p>
+						</article>
+
+						<article class="card">
+							<h3>Projects</h3>
+
+							<p>
+								Things I'm building, experimenting with, or trying to
+								understand.
+							</p>
+						</article>
+
+						<article class="card">
+							<h3>Photos</h3>
+
+							<p>
+								Places, adventures, and moments worth keeping.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>© {currentYear} Trey Layes · treylayes.com</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		background-color: #f4f1e8;
+		color: #20251f;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 1.65;
+	}
+
+	.container {
+		width: 90%;
+		max-width: 850px;
+		margin: 0 auto;
+	}
+
+	header {
+		padding: 28px 0;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+	}
+
+	.name {
+		color: #20251f;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		text-decoration: none;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 20px;
+	}
+
+	.nav-links a {
+		color: #697067;
+		text-decoration: none;
+	}
+
+	.nav-links a:hover {
+		color: #355c45;
+	}
+
+	.hero {
+		padding: 105px 0 95px;
+	}
+
+	.eyebrow {
+		margin: 0 0 14px;
+		color: #355c45;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		max-width: 700px;
+		margin: 0 0 24px;
+		font-size: 6rem;
+		line-height: 0.95;
+		letter-spacing: -0.055em;
+	}
+
+	h2 {
+		margin: 0 0 24px;
+		font-size: 2.6rem;
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+	}
+
+	h3 {
+		margin: 0 0 8px;
+		font-size: 1.2rem;
+	}
+
+	p {
+		margin-top: 0;
+	}
+
+	.intro {
+		max-width: 650px;
+		margin-bottom: 0;
+		color: #697067;
+		font-size: 1.3rem;
+	}
+
+	.content-section {
+		padding: 70px 0;
+		border-top: 1px solid #d8d6cc;
+	}
+
+	.about-card {
+		padding: 48px;
+		border: 1px solid #d8d6cc;
+		border-radius: 22px;
+		background-color: #fffdf8;
+	}
+
+	.about-card p:last-child {
+		margin-bottom: 0;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 16px;
+		margin-top: 32px;
+	}
+
+	.card {
+		min-height: 155px;
+		padding: 22px;
+		border: 1px solid #d8d6cc;
+		border-radius: 16px;
+		background-color: #fffdf8;
+	}
+
+	.card p {
+		margin-bottom: 0;
+		color: #697067;
+		font-size: 0.95rem;
+	}
+
+	footer {
+		padding: 50px 0 70px;
+		color: #697067;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 650px) {
+		.hero {
+			padding: 65px 0;
+		}
+
+		h1 {
+			font-size: 4rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.about-card {
+			padding: 28px;
+		}
+
+		.cards {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
